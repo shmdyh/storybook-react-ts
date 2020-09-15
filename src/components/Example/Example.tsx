@@ -12,7 +12,7 @@ export interface ExampleProps {
   action(): void;
 }
 
-const Example = (props: ExampleProps) => {
+export const Example = (props: ExampleProps) => {
   const { text, flag, action } = props;
   const [count, countChg] = useState(0);
   const countUp = useCallback(() => countChg(prev => prev + 1), []);
@@ -29,4 +29,4 @@ const Example = (props: ExampleProps) => {
   );
 };
 
-export default Example;
+// export default Example;
